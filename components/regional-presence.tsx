@@ -71,22 +71,22 @@ export function RegionalPresence() {
             subtitle="Headquartered in Barishal with global engineering standards. We deliver elite digital products, custom mobile apps, and AI systems for ambitious businesses across Barishal Division and worldwide."
           />
 
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-[#222222] bg-[#0A0A0A] shrink-0 self-start lg:self-auto">
-            <MapPin className="w-4 h-4 text-white" />
-            <span className="text-xs font-mono text-[#A0A0A0]">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-[#222222] bg-[#0A0A0A] shrink-0 self-start lg:self-auto max-w-full">
+            <MapPin className="w-4 h-4 text-white shrink-0" />
+            <span className="text-xs font-mono text-[#A0A0A0] truncate sm:whitespace-normal">
               Barishal Division &bull; Serving 6 Districts &amp; Global Markets
             </span>
           </div>
         </div>
 
         {/* 4 Core Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
           {capabilities.map((cap) => {
             const Icon = cap.icon;
             return (
               <div
                 key={cap.title}
-                className="p-6 rounded-xl bg-[#0A0A0A] border border-[#222222] hover:border-[#444444] transition-all"
+                className="p-5 sm:p-6 rounded-xl bg-[#0A0A0A] border border-[#222222] hover:border-[#444444] transition-all"
               >
                 <div className="w-8 h-8 rounded bg-[#141414] border border-[#262626] flex items-center justify-center text-white mb-4">
                   <Icon className="w-4 h-4" />
@@ -99,10 +99,10 @@ export function RegionalPresence() {
         </div>
 
         {/* District Coverage Grid */}
-        <div className="rounded-xl border border-[#222222] bg-[#0A0A0A] p-6 sm:p-10">
+        <div className="rounded-xl border border-[#222222] bg-[#0A0A0A] p-5 sm:p-10">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-[#1A1A1A] gap-4">
             <div>
-              <h3 className="text-lg font-bold text-white">
+              <h3 className="text-base sm:text-lg font-bold text-white">
                 Comprehensive Coverage Across All 6 Districts of Barishal Division
               </h3>
               <p className="text-xs text-[#888888] font-mono mt-1">
@@ -118,7 +118,7 @@ export function RegionalPresence() {
             </a>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {districts.map((district) => (
               <div
                 key={district.name}

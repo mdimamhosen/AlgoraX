@@ -34,7 +34,7 @@ export function Hero() {
 
         {/* Large Typographic Headline */}
         <div className="max-w-5xl">
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-white leading-[1.08] sm:leading-[1.05]">
+          <h1 className="text-3xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-white leading-[1.12] sm:leading-[1.08] md:leading-[1.05]">
             <span>{hero.headingLine1.split("intelligent")[0]}</span>
             <span className="font-serif italic font-normal tracking-normal text-white underline decoration-[#333333] underline-offset-8">
               intelligent
@@ -44,15 +44,15 @@ export function Hero() {
           </h1>
 
           {/* Supporting Text */}
-          <p className="mt-6 sm:mt-8 text-lg sm:text-xl text-[#A0A0A0] max-w-2xl leading-relaxed font-normal">
+          <p className="mt-6 sm:mt-8 text-base sm:text-xl text-[#A0A0A0] max-w-2xl leading-relaxed font-normal">
             {hero.supportingText}
           </p>
 
           {/* Action CTAs */}
-          <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
             <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md bg-white text-black font-semibold text-sm transition-all duration-200 hover:bg-[#EAEAEA] hover:shadow-[0_0_24px_rgba(255,255,255,0.2)] active:scale-[0.98]"
+              className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md bg-white text-black font-semibold text-sm transition-all duration-200 hover:bg-[#EAEAEA] hover:shadow-[0_0_24px_rgba(255,255,255,0.2)] active:scale-[0.98] w-full sm:w-auto"
             >
               <span>{hero.primaryCta}</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -60,7 +60,7 @@ export function Hero() {
 
             <a
               href="#work"
-              className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-[#0A0A0A] text-white font-medium text-sm border border-[#222222] transition-all duration-200 hover:border-[#444444] hover:bg-[#111111] active:scale-[0.98]"
+              className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-[#0A0A0A] text-white font-medium text-sm border border-[#222222] transition-all duration-200 hover:border-[#444444] hover:bg-[#111111] active:scale-[0.98] w-full sm:w-auto"
             >
               <span>{hero.secondaryCta}</span>
               <ArrowDown className="w-3.5 h-3.5 text-[#666666] group-hover:text-white transition-colors duration-200" />

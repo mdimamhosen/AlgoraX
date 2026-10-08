@@ -1,34 +1,34 @@
 export function HeroVisual() {
   return (
-    <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] max-w-5xl mx-auto rounded-xl border border-[#222222] bg-[#0A0A0A]/90 p-4 sm:p-6 overflow-hidden shadow-2xl backdrop-blur-sm">
+    <div className="relative w-full aspect-[16/11] sm:aspect-[16/9] max-w-5xl mx-auto rounded-xl border border-[#222222] bg-[#0A0A0A]/90 p-3 sm:p-6 overflow-hidden shadow-2xl backdrop-blur-sm">
       {/* Background Architectural Grid */}
       <div className="absolute inset-0 tech-grid opacity-60 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80 pointer-events-none" />
 
       {/* Terminal / System Header Bar */}
-      <div className="relative z-10 flex items-center justify-between pb-4 border-b border-[#1E1E1E] text-xs font-mono text-[#666666]">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#222222] border border-[#333333]" />
-            <span className="w-2.5 h-2.5 rounded-full bg-[#222222] border border-[#333333]" />
-            <span className="w-2.5 h-2.5 rounded-full bg-[#222222] border border-[#333333]" />
+      <div className="relative z-10 flex items-center justify-between pb-3 sm:pb-4 border-b border-[#1E1E1E] text-xs font-mono text-[#666666]">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <div className="flex items-center gap-1 sm:gap-1.5 shrink-0">
+            <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#222222] border border-[#333333]" />
+            <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#222222] border border-[#333333]" />
+            <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#222222] border border-[#333333]" />
           </div>
-          <span className="text-[#A0A0A0] hidden sm:inline-block">system://algorax.core.engine</span>
+          <span className="text-[#A0A0A0] text-[10px] sm:text-xs truncate">system://algorax.core.engine</span>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2.5 sm:gap-4 shrink-0">
           <span className="hidden sm:inline-flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-white animate-subtle-pulse" />
             <span className="text-[#A0A0A0]">CLUSTER: ACTIVE</span>
           </span>
-          <span className="text-[#666666]">NODE_LATENCY: 1.4ms</span>
-          <span className="text-[#A0A0A0] font-bold">v2.4.0</span>
+          <span className="text-[#666666] hidden sm:inline-block">NODE_LATENCY: 1.4ms</span>
+          <span className="text-[#A0A0A0] font-bold text-[10px] sm:text-xs">v2.4.0</span>
         </div>
       </div>
 
       {/* Main Abstract Technical Canvas Area */}
-      <div className="relative z-10 w-full h-[calc(100%-40px)] flex items-center justify-center py-4">
+      <div className="relative z-10 w-full h-[calc(100%-36px)] sm:h-[calc(100%-40px)] flex items-center justify-center py-2 sm:py-4">
         <svg
           viewBox="0 0 800 400"
           className="w-full h-full max-h-[360px] overflow-visible select-none"
@@ -176,15 +176,15 @@ export function HeroVisual() {
       </div>
 
       {/* Bottom Telemetry Bar */}
-      <div className="relative z-10 pt-3 border-t border-[#1E1E1E] flex flex-wrap items-center justify-between text-[11px] font-mono text-[#666666] gap-2">
-        <div className="flex items-center gap-4">
+      <div className="relative z-10 pt-2.5 sm:pt-3 border-t border-[#1E1E1E] flex flex-col sm:flex-row items-start sm:items-center justify-between text-[10px] sm:text-[11px] font-mono text-[#666666] gap-2">
+        <div className="flex items-center gap-3 sm:gap-4">
           <span className="flex items-center gap-1.5 text-[#A0A0A0]">
             <span className="inline-block w-1.5 h-1.5 bg-white" />
             <span>ARCHITECTURE: DISTRIBUTED</span>
           </span>
           <span className="hidden md:inline-block">PROTOCOL: GRPC / WEBSOCKET</span>
         </div>
-        <div className="flex items-center gap-4 text-[#A0A0A0]">
+        <div className="flex items-center gap-3 sm:gap-4 text-[#A0A0A0]">
           <span>TOKEN_STREAM: 84 tok/s</span>
           <span className="text-white font-medium">99.99% DETERMINISTIC</span>
         </div>

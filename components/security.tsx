@@ -23,7 +23,7 @@ export function Security() {
             return (
               <div
                 key={pillar.title}
-                className="p-6 rounded-xl bg-[#0A0A0A] border border-[#222222] hover:border-[#444444] transition-all flex flex-col justify-between"
+                className="p-5 sm:p-6 rounded-xl bg-[#0A0A0A] border border-[#222222] hover:border-[#444444] transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between pb-4 border-b border-[#1A1A1A]">

@@ -68,24 +68,24 @@ function ProjectVisual({ id }: { id: string }) {
         </div>
 
         {/* Collaborative Node Matrix Mockup */}
-        <div className="relative z-10 grid grid-cols-3 gap-2 my-auto py-2">
+        <div className="relative z-10 grid grid-cols-3 gap-1.5 sm:gap-2 my-auto py-2">
           <div className="p-2 rounded bg-[#0A0A0A] border border-[#222222]">
             <span className="text-[9px] font-mono text-[#666666]">US-EAST</span>
-            <div className="text-sm font-mono font-bold text-white mt-1">14ms</div>
+            <div className="text-xs sm:text-sm font-mono font-bold text-white mt-1">14ms</div>
             <div className="w-full h-1 bg-[#1A1A1A] rounded-full mt-2 overflow-hidden">
               <div className="w-4/5 h-full bg-white" />
             </div>
           </div>
           <div className="p-2 rounded bg-[#0A0A0A] border border-[#222222]">
             <span className="text-[9px] font-mono text-[#666666]">EU-CENTRAL</span>
-            <div className="text-sm font-mono font-bold text-white mt-1">28ms</div>
+            <div className="text-xs sm:text-sm font-mono font-bold text-white mt-1">28ms</div>
             <div className="w-full h-1 bg-[#1A1A1A] rounded-full mt-2 overflow-hidden">
               <div className="w-3/5 h-full bg-white" />
             </div>
           </div>
           <div className="p-2 rounded bg-[#0A0A0A] border border-[#222222]">
             <span className="text-[9px] font-mono text-[#666666]">AP-NORTHEAST</span>
-            <div className="text-sm font-mono font-bold text-white mt-1">45ms</div>
+            <div className="text-xs sm:text-sm font-mono font-bold text-white mt-1">45ms</div>
             <div className="w-full h-1 bg-[#1A1A1A] rounded-full mt-2 overflow-hidden">
               <div className="w-2/3 h-full bg-white" />
             </div>
@@ -185,7 +185,7 @@ export function Projects() {
         />
 
         {/* 2x2 Grid of Detailed Project Cards */}
-        <div className="mt-14 sm:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="mt-14 sm:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project: ProjectItem) => (
             <div
               key={project.id}
@@ -195,7 +195,7 @@ export function Projects() {
               <ProjectVisual id={project.id} />
 
               {/* Content Area */}
-              <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+              <div className="p-5 sm:p-8 flex-1 flex flex-col justify-between">
                 <div>
                   {/* Category and Index */}
                   <div className="flex items-center justify-between mb-3 text-xs font-mono">
@@ -208,7 +208,7 @@ export function Projects() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-white tracking-tight group-hover:text-white transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-white transition-colors">
                     {project.title}
                   </h3>
 
@@ -232,7 +232,7 @@ export function Projects() {
                 </div>
 
                 {/* Footer tags and View Project Link */}
-                <div className="mt-8 pt-6 border-t border-[#1A1A1A] flex flex-wrap items-center justify-between gap-4">
+                <div className="mt-8 pt-6 border-t border-[#1A1A1A] flex flex-wrap items-center justify-between gap-3 sm:gap-4">
                   <div className="flex flex-wrap gap-1.5">
                     {project.tags.map((tag) => (
                       <span

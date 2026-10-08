@@ -35,7 +35,7 @@ export function Footer() {
           </div>
 
           {/* Right Links & Back to top */}
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 sm:gap-6">
             <a
               href={social.portfolio}
               target="_blank"

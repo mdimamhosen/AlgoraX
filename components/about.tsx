@@ -44,20 +44,20 @@ export function About() {
           </div>
 
           {/* Right Column: Key Statistics Grid */}
-          <div className="lg:col-span-5 grid grid-cols-2 gap-4">
+          <div className="lg:col-span-5 grid grid-cols-2 gap-3 sm:gap-4">
             {about.stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="p-6 sm:p-7 rounded-xl bg-[#0A0A0A] border border-[#222222] hover:border-[#444444] transition-colors flex flex-col justify-between"
+                className="p-4 sm:p-7 rounded-xl bg-[#0A0A0A] border border-[#222222] hover:border-[#444444] transition-colors flex flex-col justify-between"
               >
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold text-white tracking-tight">
+                <div className="text-2xl sm:text-4xl lg:text-5xl font-mono font-bold text-white tracking-tight">
                   {stat.value}
                 </div>
-                <div className="mt-6">
-                  <div className="text-sm font-semibold text-white">
+                <div className="mt-4 sm:mt-6">
+                  <div className="text-xs sm:text-sm font-semibold text-white">
                     {stat.label}
                   </div>
-                  <div className="text-xs text-[#666666] font-mono mt-1">
+                  <div className="text-[11px] sm:text-xs text-[#666666] font-mono mt-1">
                     {stat.sublabel}
                   </div>
                 </div>
@@ -68,7 +68,7 @@ export function About() {
 
         {/* Founder & Engineering Leadership Showcase */}
         {founder && (
-          <div className="mt-16 rounded-xl bg-[#080808] border border-[#222222] p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="mt-16 rounded-xl bg-[#080808] border border-[#222222] p-5 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-white" />
@@ -88,12 +88,12 @@ export function About() {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 shrink-0 w-full md:w-auto">
               <a
                 href={founder.portfolio}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-white text-black font-semibold text-xs font-mono hover:bg-[#EAEAEA] transition-all"
+                className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-md bg-white text-black font-semibold text-xs font-mono hover:bg-[#EAEAEA] transition-all w-full sm:w-auto"
               >
                 <span>View Founder Portfolio</span>
                 <ExternalLink className="w-3.5 h-3.5" />
