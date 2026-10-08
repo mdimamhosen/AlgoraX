@@ -89,7 +89,7 @@ export function JsonLd() {
           "Next.js Development",
           "React Native & Flutter",
           "SaaS Platform Development",
-          "Anthropic Claude Integration",
+          "AI & Multi-Agent Systems Integration",
           "Cloud Infrastructure",
         ],
         priceRange: "$$",
@@ -146,7 +146,7 @@ export function JsonLd() {
                 "@type": "Service",
                 name: "AI & Custom Software Development",
                 description:
-                  "LLM applications, Claude 3.5 integrations, automated workflows, and enterprise business management systems.",
+                  "Autonomous LLM systems, intelligent RAG pipelines, automated workflows, and enterprise business management systems.",
               },
             },
           ],

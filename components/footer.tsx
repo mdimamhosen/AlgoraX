@@ -10,8 +10,14 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-[#141414]">
           {/* Left Brand & Copyright */}
           <div className="flex flex-col gap-1.5">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-white" />
+            <div className="flex items-center gap-2.5">
+              <div className="w-5 h-5 rounded bg-[#0A0A0A] border border-[#222222] p-0.5 flex items-center justify-center">
+                <svg viewBox="0 0 64 64" fill="none" className="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M32 13L50 31L42.5 38.5L32 28L21.5 38.5L14 31L32 13Z" fill="#FFFFFF"/>
+                  <path d="M32 51L14 33L21.5 25.5L32 36L42.5 25.5L50 33L32 51Z" fill="#E5E5E5"/>
+                  <circle cx="32" cy="32" r="1.5" fill="#FFFFFF"/>
+                </svg>
+              </div>
               <span className="font-bold text-sm text-white tracking-tight">AlgoraX</span>
             </div>
             <p className="text-[#555555]">

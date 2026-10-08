@@ -52,14 +52,12 @@ export function Navbar() {
             className="group flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white rounded py-1"
             aria-label="AlgoraX Homepage"
           >
-            <div className="relative w-8 h-8 rounded-md bg-[#0A0A0A] border border-[#222222] flex items-center justify-center group-hover:border-white transition-colors duration-200 p-1">
-              <svg viewBox="0 0 48 48" fill="none" className="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M14 35L24 13L34 35" stroke="#FFFFFF" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M17.5 27.5H30.5" stroke="#FFFFFF" strokeWidth="2.6" strokeLinecap="round"/>
-                <path d="M18 19L30 31" stroke="#A0A0A0" strokeWidth="2.2" strokeLinecap="round"/>
-                <path d="M30 19L18 31" stroke="#A0A0A0" strokeWidth="2.2" strokeLinecap="round"/>
-                <circle cx="24" cy="13" r="2.8" fill="#FFFFFF"/>
-                <circle cx="24" cy="25" r="2.2" fill="#FFFFFF"/>
+            <div className="relative w-8 h-8 rounded-lg bg-[#0A0A0A] border border-[#222222] flex items-center justify-center group-hover:border-white transition-colors duration-200 p-1">
+              <svg viewBox="0 0 64 64" fill="none" className="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M32 13L50 31L42.5 38.5L32 28L21.5 38.5L14 31L32 13Z" fill="#FFFFFF"/>
+                <path d="M32 51L14 33L21.5 25.5L32 36L42.5 25.5L50 33L32 51Z" fill="#E5E5E5"/>
+                <rect x="30" y="30" width="4" height="4" rx="1" transform="rotate(45 32 32)" fill="#000000"/>
+                <circle cx="32" cy="32" r="1.5" fill="#FFFFFF"/>
               </svg>
             </div>
             <span className="text-lg font-bold tracking-tight text-white font-mono">

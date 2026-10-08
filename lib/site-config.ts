@@ -30,37 +30,6 @@ export interface StatItem {
   sublabel: string;
 }
 
-export interface ClaudeCapability {
-  title: string;
-  badge: string;
-  description: string;
-  metrics: string;
-}
-
-export interface SimulatorScenario {
-  id: string;
-  title: string;
-  model: string;
-  tokenContext: string;
-  cacheHitRatio: string;
-  latency: string;
-  prompt: string;
-  reasoningSteps: string[];
-  outputJson: string;
-}
-
-export interface PricingTier {
-  id: string;
-  name: string;
-  badge?: string;
-  price: string;
-  billing: string;
-  description: string;
-  features: string[];
-  cta: string;
-  popular?: boolean;
-}
-
 export interface FaqItem {
   question: string;
   answer: string;
@@ -91,14 +60,14 @@ export const siteConfig = {
     secondaryCta: "View Our Work",
   },
   tickerItems: [
-    "ANTHROPIC CLAUDE 3.5",
-    "PROMPT CACHING",
-    "AI AGENTS",
+    "AI SYSTEMS",
     "SOFTWARE ENGINEERING",
     "AUTOMATION",
     "SAAS PLATFORMS",
-    "200K CONTEXT REASONING",
-    "ENTERPRISE RAG",
+    "DIGITAL PRODUCTS",
+    "RAG PIPELINES",
+    "MULTI-AGENT WORKFLOWS",
+    "HIGH-PERFORMANCE WEB",
   ],
   services: [
     {
@@ -107,7 +76,7 @@ export const siteConfig = {
       description:
         "LLM applications, RAG systems, AI agents, AI automation and intelligent workflows designed for enterprise reliability and speed.",
       iconName: "Cpu",
-      tags: ["Claude 3.5", "RAG", "Autonomous Agents", "Vector DBs"],
+      tags: ["LLMs", "RAG", "Autonomous Agents", "Vector DBs"],
     },
     {
       number: "02",
@@ -157,8 +126,8 @@ export const siteConfig = {
       title: "ClientServe AI",
       category: "AI SaaS Platform",
       description:
-        "An AI-powered customer communication and automation platform combining Claude 3.5 Sonnet, RAG, prompt caching, workflow automation and business integrations.",
-      tags: ["Claude 3.5", "SaaS", "RAG", "Prompt Cache", "NestJS", "Next.js"],
+        "An AI-powered customer communication and automation platform combining LLMs, RAG, workflow automation and business integrations for high-volume enterprise teams.",
+      tags: ["AI", "SaaS", "RAG", "Automation", "NestJS", "Next.js"],
       features: [
         "Sub-150ms semantic search over 1M+ docs",
         "Autonomous triage agent with human-in-the-loop",
@@ -173,7 +142,7 @@ export const siteConfig = {
       category: "AI-Powered SaaS",
       description:
         "A modern SaaS platform combining intelligent search, knowledge retrieval, booking workflows and real-time communication for distributed teams.",
-      tags: ["Next.js", "Claude Haiku", "RAG", "PostgreSQL", "Socket.IO"],
+      tags: ["Next.js", "AI", "RAG", "PostgreSQL", "Socket.IO"],
       features: [
         "Real-time collaborative workspaces",
         "Context-aware AI synthesis assistant",
@@ -188,7 +157,7 @@ export const siteConfig = {
       category: "Intelligent Workflows",
       description:
         "Automated AI workflows designed to eliminate repetitive operational bottlenecks, linking heterogeneous enterprise systems with deterministic reliability.",
-      tags: ["LLM", "Claude Agents", "Automation", "APIs"],
+      tags: ["LLM", "Agents", "Automation", "APIs"],
       features: [
         "DAG-based visual pipeline orchestrator",
         "Self-correcting JSON schemas & fallback logic",
@@ -225,186 +194,12 @@ export const siteConfig = {
       { value: "Global", label: "Mindset", sublabel: "Distributed worldwide" },
     ] as StatItem[],
   },
-  claudeCapabilities: [
-    {
-      title: "Claude 3.5 Sonnet Integration",
-      badge: "State-of-the-Art Reasoning",
-      description:
-        "Harnessing industry-leading code generation, architectural synthesis, and multi-step agent reasoning with high steerability.",
-      metrics: "93.7% HumanEval",
-    },
-    {
-      title: "Prompt Caching Architecture",
-      badge: "Cost & Latency Optimization",
-      description:
-        "Slashing API costs by up to 90% and time-to-first-token by 85% by caching extensive codebases and system instructions.",
-      metrics: "-90% Token Cost",
-    },
-    {
-      title: "200,000 Token Context Window",
-      badge: "Full-Codebase Synthesis",
-      description:
-        "Ingesting full documentation suites, database schemas, and multi-file codebases in a single deterministic prompt context.",
-      metrics: "200K Tokens",
-    },
-    {
-      title: "Deterministic Tool & Computer Use",
-      badge: "Autonomous Execution",
-      description:
-        "Bridging Claude with real-world APIs, sandboxed runtimes, and external services via structured schema tool calls.",
-      metrics: "<0.01% Hallucination",
-    },
-  ] as ClaudeCapability[],
-  simulatorScenarios: [
-    {
-      id: "agent-triage",
-      title: "Autonomous Triage Agent",
-      model: "claude-3-5-sonnet-latest",
-      tokenContext: "128,450 tokens",
-      cacheHitRatio: "91.4% Cached",
-      latency: "284ms TTFT",
-      prompt: "Analyze enterprise customer ticket #8491, cross-reference SLA database and dispatch refund webhook if conditions match.",
-      reasoningSteps: [
-        "1. Verified user subscription state via tool:query_account_ledger()",
-        "2. Retrieved SLA policy doc [clause 4.2] via cached context lookup",
-        "3. Evaluated eligibility: Downtime exceeded 45 mins. Eligible for $120 credit",
-        "4. Executed tool:issue_credit_memo({ amount: 120, ticket_id: '8491' })",
-        "5. Emitted human-auditable confirmation receipt to Slack webhook",
-      ],
-      outputJson: JSON.stringify(
-        {
-          status: "RESOLVED",
-          action: "credit_issued",
-          amount: 120,
-          currency: "USD",
-          policy_clause: "4.2_outage_sla",
-          audit_hash: "0x8fa3...b912",
-        },
-        null,
-        2
-      ),
-    },
-    {
-      id: "code-architect",
-      title: "Multi-Repo Code Architect",
-      model: "claude-3-5-sonnet-latest",
-      tokenContext: "192,200 tokens",
-      cacheHitRatio: "96.8% Cached",
-      latency: "310ms TTFT",
-      prompt: "Audit Next.js App Router API route handlers for SSR hydration mismatches and SQL query N+1 anti-patterns.",
-      reasoningSteps: [
-        "1. Ingested repository AST tree across 42 modules using prompt cache",
-        "2. Scanned Prisma query chains in /api/v1/workspaces/[id]/members",
-        "3. Detected N+1 in resolveMemberProfiles() batching loop",
-        "4. Refactored query to use DataLoader batch strategy with zero regressions",
-        "5. Generated unit test suite validating <2ms p99 query latency",
-      ],
-      outputJson: JSON.stringify(
-        {
-          optimizations_applied: 4,
-          p99_latency_reduction: "84%",
-          vulnerabilities_found: 0,
-          lint_status: "PASSED",
-          bundle_impact: "-14.2kb",
-        },
-        null,
-        2
-      ),
-    },
-    {
-      id: "financial-etl",
-      title: "High-Throughput Financial ETL",
-      model: "claude-3-5-haiku-latest",
-      tokenContext: "48,900 tokens",
-      cacheHitRatio: "88.2% Cached",
-      latency: "110ms TTFT",
-      prompt: "Parse unstructured multi-currency vendor invoice PDFs into strictly validated ISO 20022 JSON format.",
-      reasoningSteps: [
-        "1. Extracted OCR raw token streams from vendor PDF artifact",
-        "2. Normalized EUR to USD conversion using real-time ECB exchange rate feed",
-        "3. Validated tax compliance against EU VAT cross-border rules",
-        "4. Asserted schema against strict Pydantic / Zod ISO-20022 contract",
-        "5. Streamed validated records directly into ledger replication queue",
-      ],
-      outputJson: JSON.stringify(
-        {
-          invoice_id: "INV-2026-9041",
-          vendor_vat: "DE391829301",
-          total_converted_usd: 14250.0,
-          schema_compliance: "100%",
-          processing_time_ms: 124,
-        },
-        null,
-        2
-      ),
-    },
-  ] as SimulatorScenario[],
-  pricingTiers: [
-    {
-      id: "startup-pilot",
-      name: "Startup MVP Sprint",
-      badge: "Built for Early Startups",
-      price: "$3,500",
-      billing: "fixed scope / 2-week sprint",
-      description:
-        "Fast-track your AI product from concept to working production MVP ready for users, demo days, and angel/seed investors.",
-      features: [
-        "Production Next.js 16 + TypeScript web app",
-        "Anthropic Claude 3.5 Sonnet / Haiku integration",
-        "Prompt caching configured for 80%+ API savings",
-        "Vercel serverless deployment setup",
-        "Direct founder-to-engineer Slack/Discord channel",
-        "Full IP & source code ownership transferred",
-      ],
-      cta: "Book MVP Sprint",
-      popular: false,
-    },
-    {
-      id: "scale-up",
-      name: "Startup Dedicated Partner",
-      badge: "Recommended for Startups",
-      price: "$7,500",
-      billing: "per month / cancel anytime",
-      description:
-        "Dedicated engineering capacity for funded startups scaling their product, multi-agent pipelines, and core infrastructure.",
-      features: [
-        "Continuous feature delivery (weekly sprints)",
-        "Advanced Claude multi-agent workflows & DAG pipelines",
-        "Custom vector search & hybrid RAG infrastructure",
-        "Observability, token tracing & cost optimization",
-        "Automated CI/CD, unit & end-to-end testing",
-        "Priority 24/7 incident response SLA",
-        "Claude for Startups credits consultation",
-      ],
-      cta: "Apply for Dedicated Capacity",
-      popular: true,
-    },
-    {
-      id: "enterprise",
-      name: "Enterprise AI Transformation",
-      badge: "Custom Architecture",
-      price: "Custom",
-      billing: "tailored contract",
-      description:
-        "Enterprise-grade software engineering, private VPC deployment, Zero Data Retention compliance, and bespoke AI systems.",
-      features: [
-        "Private VPC & air-gapped deployment options",
-        "Zero Data Retention (ZDR) guarantee",
-        "SOC-2 Type II & ISO 27001 readiness review",
-        "Custom LLM fine-tuning & evaluation benchmarks",
-        "High-availability multi-region fault tolerance",
-        "Dedicated technical lead & executive engineering review",
-      ],
-      cta: "Contact Enterprise Sales",
-      popular: false,
-    },
-  ] as PricingTier[],
   securityPillars: [
     {
       title: "Zero Data Retention (ZDR)",
       code: "SEC_ZDR_01",
       description:
-        "Configured so prompt inputs and completions are never stored on external LLM servers or used to train public foundation models.",
+        "Engineered so proprietary enterprise inputs and data streams are never stored on external LLM servers or used to train public foundation models.",
     },
     {
       title: "Granular Vault Encryption",
@@ -413,10 +208,10 @@ export const siteConfig = {
         "API keys and sensitive tenant tokens are protected with AES-256-GCM encryption and rotated on isolated KMS envelopes.",
     },
     {
-      title: "Prompt Injection Defense",
+      title: "Deterministic Guardrails",
       code: "DEF_GUARD_v3",
       description:
-        "Deterministic pre-flight guardrails, schema enforcement, and delimiter boundary isolation neutralize adversarial jailbreak vectors.",
+        "Pre-flight validation, schema enforcement, and delimiter boundary isolation neutralize adversarial prompt injection vectors.",
     },
     {
       title: "SOC-2 & GDPR Alignment",
@@ -427,34 +222,34 @@ export const siteConfig = {
   ] as SecurityPillar[],
   faqItems: [
     {
-      question: "Why does AlgoraX specialize in Anthropic Claude?",
+      question: "What types of software and digital products does AlgoraX build?",
       answer:
-        "Anthropic Claude 3.5 Sonnet represents the premier model for sophisticated software engineering, complex reasoning, and deterministic tool use. Combined with features like Prompt Caching (saving up to 90% in token costs) and 200,000 token context windows, Claude allows us to build AI systems that are dramatically faster, more cost-effective, and more reliable than older architectures.",
+        "AlgoraX specializes in AI-powered software, scalable SaaS platforms, automated business pipelines, high-performance web applications with Next.js, and modern cross-platform mobile apps. From initial technical architecture to enterprise production, we engineer complete, reliable systems.",
     },
     {
-      question: "Can we use our Anthropic Claude startup credits with AlgoraX?",
+      question: "How does AlgoraX integrate Artificial Intelligence into products?",
       answer:
-        "Yes, absolutely! If you are part of the Anthropic Claude for Startups program or have received Anthropic API credits, we architect your solution using your organization's API credentials directly. Your credits offset 100% of the ongoing model inference costs, and you retain total administrative sovereignty over your keys and usage dashboards.",
+        "We build AI natively into the application architecture—leveraging autonomous multi-agent workflows, Retrieval-Augmented Generation (RAG) over vector databases, structured schema outputs, and deterministic fallbacks to guarantee high accuracy without hallucinations.",
     },
     {
-      question: "Who owns the code, intellectual property, and models?",
+      question: "Who owns the code, intellectual property, and assets?",
       answer:
-        "You own 100% of all intellectual property, source code, data schemas, prompt workflows, and architectural assets upon project delivery. There are no proprietary lock-ins, licenses, or hidden royalties.",
+        "You own 100% of all intellectual property, source code, repositories, data schemas, and assets upon project completion. There are zero proprietary lock-ins, licenses, or recurring agency fees.",
     },
     {
-      question: "How do you keep ongoing AI API costs low?",
+      question: "How does AlgoraX ensure software reliability and performance?",
       answer:
-        "We implement advanced prompt engineering and Anthropic Prompt Caching from day one. Frequently referenced documents, system instructions, and schema definitions are cached, resulting in an immediate 90% cost reduction for cached input tokens and up to an 85% drop in time-to-first-token latency.",
+        "We write strict TypeScript, follow modular component design, enforce automated CI/CD testing, and architect systems with sub-100ms response latencies and 99.9%+ uptime SLAs.",
     },
     {
-      question: "Is client data kept private and secure?",
+      question: "How is client data protected and secured?",
       answer:
-        "Yes. We configure Zero Data Retention (ZDR) endpoints so customer data is never cached or used to train third-party models. We also implement sandboxed API keys, client-side encryption, and strict RBAC across every system we deploy.",
+        "We adhere to Zero Data Retention principles, isolated VPC perimeters, end-to-end data encryption in transit and at rest, and strict role-based access control (RBAC).",
     },
     {
-      question: "How quickly can we launch a production-ready MVP?",
+      question: "How do we collaborate and start a project with AlgoraX?",
       answer:
-        "Our standard Startup MVP Sprint delivers a production-ready, fully deployed Next.js application integrated with Claude 3.5 in just 2 weeks. Because we operate with a lean, senior engineering team, we eliminate bureaucratic overhead and ship real code immediately.",
+        "We operate in fast, focused sprint cadences with direct engineering communication. Reach out via hello@algorax.com or through our contact form with your technical requirements, and our engineering team will respond within 24 hours.",
     },
   ] as FaqItem[],
   technologies: [
@@ -468,7 +263,6 @@ export const siteConfig = {
     { name: "Redis", category: "Cache / Queue" },
     { name: "Docker", category: "DevOps" },
     { name: "AWS", category: "Cloud" },
-    { name: "Claude 3.5", category: "Anthropic AI" },
     { name: "OpenAI", category: "AI / LLM" },
     { name: "LangChain", category: "AI Orchestration" },
     { name: "LangGraph", category: "AI Multi-Agent" },
@@ -556,9 +350,10 @@ export const siteConfig = {
   navLinks: [
     { label: "Services", href: "#services" },
     { label: "Work", href: "#work" },
-    { label: "Claude Stack", href: "#claude-architecture" },
-    { label: "Simulator", href: "#simulator" },
-    { label: "Pricing", href: "#pricing" },
+    { label: "Barishal Hub", href: "#regional-presence" },
+    { label: "About", href: "#about" },
+    { label: "Process", href: "#process" },
+    { label: "Expertise", href: "#expertise" },
     { label: "Security", href: "#security" },
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },

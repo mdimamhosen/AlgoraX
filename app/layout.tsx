@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
+import { JsonLd } from "@/components/json-ld";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,21 +26,31 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.name}`,
+    default: "AlgoraX — Top AI, Web & App Development in Barishal Division",
+    template: `%s | AlgoraX`,
   },
-  description: siteConfig.description,
+  description:
+    "AlgoraX is the premier AI, web development, and mobile app development software company in Barishal Division, Bangladesh. We build high-performance Next.js web applications, iOS/Android mobile apps, SaaS platforms, and intelligent software systems for businesses across Barishal Division and worldwide.",
   keywords: [
-    "AI development",
-    "AI software development",
-    "SaaS development",
-    "AI automation",
-    "RAG development",
-    "AI agents",
-    "Next.js development",
-    "software development",
-    "web application development",
-    "custom software",
+    "web development Barishal",
+    "web development Barisal division",
+    "app development Barishal",
+    "app development Barisal division",
+    "mobile app development Barishal",
+    "software company Barishal",
+    "software company in Barisal",
+    "best software development company Barishal",
+    "website design Barishal division",
+    "iOS Android app development Barishal",
+    "Next.js development company Bangladesh",
+    "AI software development Barishal",
+    "Patuakhali web development",
+    "Bhola app development",
+    "Pirojpur software agency",
+    "Barguna digital agency",
+    "Jhalokati IT firm",
+    "top web developers in Barishal division",
+    "custom software development Barishal",
     "AlgoraX",
     "enterprise AI",
     "full-stack engineering",
@@ -54,15 +65,26 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
-    title: siteConfig.title,
-    description: siteConfig.description,
+    title: "AlgoraX — Top AI, Web & App Development in Barishal Division",
+    description:
+      "Premier AI, web and mobile app development studio in Barishal Division, Bangladesh. High-performance Next.js web apps, mobile apps, and scalable SaaS platforms.",
     siteName: siteConfig.name,
+    images: [
+      {
+        url: "/logo.svg",
+        width: 1200,
+        height: 630,
+        alt: "AlgoraX — AI, Web & App Development in Barishal Division",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.title,
-    description: siteConfig.description,
+    title: "AlgoraX — Top AI, Web & App Development in Barishal Division",
+    description:
+      "Leading AI, web and mobile app development company in Barishal Division. We build intelligent software for ambitious businesses.",
     creator: "@algorax",
+    images: ["/logo.svg"],
   },
   robots: {
     index: true,
@@ -76,8 +98,17 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/icon.svg",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
     apple: "/icon.svg",
+  },
+  other: {
+    "geo.region": "BD-02",
+    "geo.placename": "Barishal, Barishal Division, Bangladesh",
+    "geo.position": "22.7010;90.3535",
+    ICBM: "22.7010, 90.3535",
   },
 };
 
@@ -91,6 +122,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark`}
     >
+      <head>
+        <JsonLd />
+      </head>
       <body className="min-h-screen bg-black text-white antialiased selection:bg-white selection:text-black">
         {children}
       </body>
