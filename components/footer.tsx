@@ -37,6 +37,14 @@ export function Footer() {
           {/* Right Links & Back to top */}
           <div className="flex items-center gap-6">
             <a
+              href={social.portfolio}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              Founder Portfolio
+            </a>
+            <a
               href={social.github}
               target="_blank"
               rel="noopener noreferrer"

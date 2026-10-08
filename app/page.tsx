@@ -9,7 +9,7 @@ import { Expertise } from "@/components/expertise";
 import { Process } from "@/components/process";
 import { WhyUs } from "@/components/why-us";
 import { Security } from "@/components/security";
-import { Faq } from "@/components/faq";
+import { ClientImpact } from "@/components/client-impact";
 import { ContactCta } from "@/components/contact-cta";
 import { Footer } from "@/components/footer";
 
@@ -51,8 +51,8 @@ export default function Home() {
         {/* 10. Security & Enterprise Data Governance */}
         <Security />
 
-        {/* 11. Frequently Asked Technical Questions */}
-        <Faq />
+        {/* 11. Engineering Impact & Real Production Case Studies */}
+        <ClientImpact />
 
         {/* 12. Direct Inquiry & Contact Action */}
         <ContactCta />

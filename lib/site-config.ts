@@ -30,10 +30,7 @@ export interface StatItem {
   sublabel: string;
 }
 
-export interface FaqItem {
-  question: string;
-  answer: string;
-}
+
 
 export interface SecurityPillar {
   title: string;
@@ -48,7 +45,7 @@ export const siteConfig = {
   description:
     "AlgoraX builds AI-powered software, SaaS platforms, automation systems and modern digital products for ambitious businesses.",
   url: "https://algorax.com",
-  email: "hello@algorax.com",
+  email: "mimam22.cse@bu.ac.bd",
   status: "Available for selected projects",
   hero: {
     badge: "Available for selected projects",
@@ -220,38 +217,7 @@ export const siteConfig = {
         "Architected around zero-trust network boundaries, immutable audit trails, and strict role-based access control (RBAC).",
     },
   ] as SecurityPillar[],
-  faqItems: [
-    {
-      question: "What types of software and digital products does AlgoraX build?",
-      answer:
-        "AlgoraX specializes in AI-powered software, scalable SaaS platforms, automated business pipelines, high-performance web applications with Next.js, and modern cross-platform mobile apps. From initial technical architecture to enterprise production, we engineer complete, reliable systems.",
-    },
-    {
-      question: "How does AlgoraX integrate Artificial Intelligence into products?",
-      answer:
-        "We build AI natively into the application architecture—leveraging autonomous multi-agent workflows, Retrieval-Augmented Generation (RAG) over vector databases, structured schema outputs, and deterministic fallbacks to guarantee high accuracy without hallucinations.",
-    },
-    {
-      question: "Who owns the code, intellectual property, and assets?",
-      answer:
-        "You own 100% of all intellectual property, source code, repositories, data schemas, and assets upon project completion. There are zero proprietary lock-ins, licenses, or recurring agency fees.",
-    },
-    {
-      question: "How does AlgoraX ensure software reliability and performance?",
-      answer:
-        "We write strict TypeScript, follow modular component design, enforce automated CI/CD testing, and architect systems with sub-100ms response latencies and 99.9%+ uptime SLAs.",
-    },
-    {
-      question: "How is client data protected and secured?",
-      answer:
-        "We adhere to Zero Data Retention principles, isolated VPC perimeters, end-to-end data encryption in transit and at rest, and strict role-based access control (RBAC).",
-    },
-    {
-      question: "How do we collaborate and start a project with AlgoraX?",
-      answer:
-        "We operate in fast, focused sprint cadences with direct engineering communication. Reach out via hello@algorax.com or through our contact form with your technical requirements, and our engineering team will respond within 24 hours.",
-    },
-  ] as FaqItem[],
+
   technologies: [
     { name: "Next.js", category: "Frontend" },
     { name: "React", category: "Frontend" },
@@ -333,18 +299,29 @@ export const siteConfig = {
         "We build software that directly solves commercial challenges, drives efficiency, and compounds business leverage.",
     },
   ],
+  founder: {
+    name: "Md. Imam Hosen",
+    role: "Founder & Lead AI Engineer",
+    institution: "Dept. of Computer Science & Engineering, University of Barishal",
+    email: "mimam22.cse@bu.ac.bd",
+    portfolio: "https://mdimamhosen.netlify.app/",
+    github: "https://github.com/mdimamhosen",
+    linkedin: "https://www.linkedin.com/in/mdimamhosen/",
+    upwork: "https://www.upwork.com/freelancers/~01639e45e2f6ee7185",
+  },
   cta: {
     headingLine1: "Have an idea?",
     headingLine2: "Let's build it.",
     supportingText:
       "Tell us what you're building, what you're trying to solve, or where you're stuck. We'll help turn the idea into a working digital product.",
     primaryCta: "Start a Conversation",
-    email: "hello@algorax.com",
+    email: "mimam22.cse@bu.ac.bd",
     sla: "Direct engineering response within 24 hours",
   },
   social: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
+    github: "https://github.com/mdimamhosen",
+    linkedin: "https://www.linkedin.com/in/mdimamhosen/",
+    portfolio: "https://mdimamhosen.netlify.app/",
     twitter: "https://x.com",
   },
   navLinks: [
@@ -355,7 +332,7 @@ export const siteConfig = {
     { label: "Process", href: "#process" },
     { label: "Expertise", href: "#expertise" },
     { label: "Security", href: "#security" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Impact", href: "#impact" },
     { label: "Contact", href: "#contact" },
   ],
 };

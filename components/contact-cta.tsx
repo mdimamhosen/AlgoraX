@@ -20,14 +20,6 @@ function LinkedinIcon({ className = "w-4 h-4" }: { className?: string }) {
   );
 }
 
-function XIcon({ className = "w-4 h-4" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
-  );
-}
-
 export function ContactCta() {
   const { cta, social } = siteConfig;
   const [copied, setCopied] = useState(false);
@@ -82,18 +74,18 @@ export function ContactCta() {
               <button
                 onClick={handleCopyEmail}
                 type="button"
-                className="inline-flex items-center gap-2 px-5 py-4 rounded-md bg-[#111111] text-white font-mono text-xs border border-[#222222] transition-all duration-200 hover:border-[#444444] hover:bg-[#161616] active:scale-[0.98] cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-4 rounded-md bg-[#111111] text-white font-mono text-xs border border-[#222222] transition-all duration-200 hover:border-white hover:bg-[#161616] active:scale-[0.98] cursor-pointer"
                 aria-label="Copy direct email address"
               >
                 {copied ? (
                   <>
                     <Check className="w-4 h-4 text-white" />
-                    <span>Copied {cta.email}</span>
+                    <span className="font-bold">Copied {cta.email}</span>
                   </>
                 ) : (
                   <>
                     <Copy className="w-4 h-4 text-[#888888]" />
-                    <span>{cta.email}</span>
+                    <span>Copy {cta.email}</span>
                   </>
                 )}
               </button>
@@ -101,24 +93,36 @@ export function ContactCta() {
 
             {/* Direct Channels & Social Links */}
             <div className="mt-14 pt-8 border-t border-[#1C1C1C] w-full flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-2 text-xs font-mono text-[#666666]">
-                <Mail className="w-3.5 h-3.5" />
-                <span>DIRECT REACH:</span>
+              <div className="flex items-center gap-2.5 text-xs font-mono">
+                <span className="px-2 py-1 rounded bg-[#141414] text-white border border-[#262626] flex items-center gap-1.5">
+                  <Mail className="w-3.5 h-3.5" />
+                  <span>DIRECT REACH:</span>
+                </span>
                 <a
                   href={`mailto:${cta.email}`}
-                  className="text-white hover:underline transition-colors"
+                  className="text-white font-bold hover:underline transition-colors"
                 >
                   {cta.email}
                 </a>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
+                <a
+                  href={social.portfolio}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 rounded-md text-xs font-mono text-white bg-[#111111] hover:bg-[#1a1a1a] border border-[#222222] hover:border-white transition-all flex items-center gap-1.5"
+                  title="Founder Portfolio"
+                >
+                  <span>Founder Portfolio</span>
+                  <ArrowUpRight className="w-3 h-3 text-[#888888]" />
+                </a>
                 <a
                   href={social.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-md text-[#666666] hover:text-white hover:bg-[#141414] border border-transparent hover:border-[#222222] transition-all"
-                  aria-label="AlgoraX GitHub"
+                  aria-label="Founder GitHub"
                 >
                   <GithubIcon className="w-4 h-4" />
                 </a>
@@ -127,18 +131,9 @@ export function ContactCta() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-md text-[#666666] hover:text-white hover:bg-[#141414] border border-transparent hover:border-[#222222] transition-all"
-                  aria-label="AlgoraX LinkedIn"
+                  aria-label="Founder LinkedIn"
                 >
                   <LinkedinIcon className="w-4 h-4" />
-                </a>
-                <a
-                  href={social.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-md text-[#666666] hover:text-white hover:bg-[#141414] border border-transparent hover:border-[#222222] transition-all"
-                  aria-label="AlgoraX X / Twitter"
-                >
-                  <XIcon className="w-4 h-4" />
                 </a>
               </div>
             </div>

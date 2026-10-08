@@ -1,8 +1,10 @@
 import { siteConfig } from "@/lib/site-config";
 import { SectionHeading } from "./section-heading";
+import { ExternalLink, Mail, GraduationCap } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "./social-icons";
 
 export function About() {
-  const { about } = siteConfig;
+  const { about, founder, social } = siteConfig;
 
   return (
     <section id="about" className="py-24 sm:py-32 relative scroll-mt-20 border-t border-[#141414]">
@@ -63,6 +65,70 @@ export function About() {
             ))}
           </div>
         </div>
+
+        {/* Founder & Engineering Leadership Showcase */}
+        {founder && (
+          <div className="mt-16 rounded-xl bg-[#080808] border border-[#222222] p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-white" />
+                <span className="text-xs font-mono text-[#888888] uppercase tracking-wider">
+                  FOUNDER &amp; CHIEF ARCHITECT
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-white tracking-tight">
+                {founder.name}
+              </h3>
+              <p className="text-xs font-mono text-[#A0A0A0] flex items-center gap-1.5">
+                <GraduationCap className="w-3.5 h-3.5 text-[#666666]" />
+                <span>{founder.institution}</span>
+              </p>
+              <p className="text-xs text-[#888888] max-w-xl leading-relaxed">
+                Specialized in multi-agent autonomous systems, full-stack Next.js platforms, mobile apps, and enterprise software engineering.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <a
+                href={founder.portfolio}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-white text-black font-semibold text-xs font-mono hover:bg-[#EAEAEA] transition-all"
+              >
+                <span>View Founder Portfolio</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+
+              <a
+                href={social.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-md bg-[#111111] border border-[#222222] hover:border-white text-[#A0A0A0] hover:text-white transition-all"
+                aria-label="GitHub Profile"
+              >
+                <GithubIcon className="w-4 h-4" />
+              </a>
+
+              <a
+                href={social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-md bg-[#111111] border border-[#222222] hover:border-white text-[#A0A0A0] hover:text-white transition-all"
+                aria-label="LinkedIn Profile"
+              >
+                <LinkedinIcon className="w-4 h-4" />
+              </a>
+
+              <a
+                href={`mailto:${founder.email}`}
+                className="p-2.5 rounded-md bg-[#111111] border border-[#222222] hover:border-white text-[#A0A0A0] hover:text-white transition-all"
+                aria-label="Email Founder"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
