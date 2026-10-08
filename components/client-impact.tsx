@@ -112,14 +112,14 @@ export function ClientImpact() {
           {caseStudies.map((study) => (
             <div
               key={study.id}
-              className="group rounded-xl bg-[#090909] border border-[#222222] p-6 sm:p-10 transition-all duration-300 hover:border-[#444444] hover:bg-[#0C0C0C]"
+              className="group rounded-xl bg-[#090909] border border-[#222222] p-5 sm:p-10 transition-all duration-300 hover:border-[#444444] hover:bg-[#0C0C0C]"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
                 {/* Left: Metric Callout */}
-                <div className="lg:col-span-4 p-6 rounded-lg bg-[#050505] border border-[#1A1A1A] flex flex-col justify-between h-full">
+                <div className="lg:col-span-4 p-5 sm:p-6 rounded-lg bg-[#050505] border border-[#1A1A1A] flex flex-col justify-between h-full">
                   <div>
                     <span className="font-mono text-xs text-[#666666]">/{study.number}</span>
-                    <div className="text-4xl sm:text-5xl font-mono font-bold text-white tracking-tight mt-2">
+                    <div className="text-3xl sm:text-5xl font-mono font-bold text-white tracking-tight mt-2">
                       {study.primaryMetric}
                     </div>
                     <span className="text-xs font-mono text-[#A0A0A0] mt-1 block">
@@ -205,7 +205,7 @@ export function ClientImpact() {
         </div>
 
         {/* Quality Standards & SLA Guarantees Bar */}
-        <div className="mt-14 p-6 sm:p-8 rounded-xl bg-[#080808] border border-[#222222] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-14 p-5 sm:p-8 rounded-xl bg-[#080808] border border-[#222222] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {engineeringGuarantees.map((g) => {
             const Icon = g.icon;
             return (

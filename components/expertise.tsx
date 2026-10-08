@@ -37,7 +37,7 @@ export function Expertise() {
         </div>
 
         {/* Architecture Guarantee Note */}
-        <div className="mt-10 p-6 rounded-xl bg-[#080808] border border-[#1A1A1A] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="mt-10 p-5 sm:p-6 rounded-xl bg-[#080808] border border-[#1A1A1A] flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 rounded-full bg-white" />
             <span className="text-sm font-medium text-white">Zero Vendor Lock-In Philosophy</span>

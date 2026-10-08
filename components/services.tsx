@@ -40,7 +40,7 @@ export function Services() {
             return (
               <div
                 key={service.number}
-                className="group relative flex flex-col justify-between p-7 sm:p-8 rounded-lg bg-[#0A0A0A] border border-[#222222] transition-all duration-300 hover:border-[#555555] hover:bg-[#0E0E0E] hover:-translate-y-1"
+                className="group relative flex flex-col justify-between p-5 sm:p-8 rounded-lg bg-[#0A0A0A] border border-[#222222] transition-all duration-300 hover:border-[#555555] hover:bg-[#0E0E0E] hover:-translate-y-1"
               >
                 {/* Top bar with number and icon */}
                 <div>

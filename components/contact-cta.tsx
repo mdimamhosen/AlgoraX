@@ -36,7 +36,7 @@ export function ContactCta() {
       <div className="absolute inset-0 tech-grid opacity-20 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-2xl bg-[#080808] border border-[#222222] p-8 sm:p-14 lg:p-20 overflow-hidden shadow-2xl">
+        <div className="relative rounded-2xl bg-[#080808] border border-[#222222] p-6 sm:p-14 lg:p-20 overflow-hidden shadow-2xl">
           {/* Subtle Ambient Radial Highlight */}
           <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-white/[0.03] blur-[100px] rounded-full pointer-events-none" />
 
@@ -50,22 +50,22 @@ export function ContactCta() {
             </div>
 
             {/* High-impact typography */}
-            <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08]">
+            <h2 className="text-3xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.12] sm:leading-[1.08]">
               {cta.headingLine1}
               <br />
               <span className="text-[#A0A0A0]">{cta.headingLine2}</span>
             </h2>
 
             {/* Supporting text */}
-            <p className="mt-6 sm:mt-8 text-base sm:text-lg text-[#888888] max-w-2xl leading-relaxed">
+            <p className="mt-5 sm:mt-8 text-base sm:text-lg text-[#888888] max-w-2xl leading-relaxed">
               {cta.supportingText}
             </p>
 
             {/* Main Action Buttons */}
-            <div className="mt-10 sm:mt-12 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto">
               <a
                 href={`mailto:${cta.email}?subject=Project%20Inquiry%20via%20AlgoraX`}
-                className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-md bg-white text-black font-semibold text-sm transition-all duration-200 hover:bg-[#E5E5E5] hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] active:scale-[0.98]"
+                className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-md bg-white text-black font-semibold text-sm transition-all duration-200 hover:bg-[#E5E5E5] hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] active:scale-[0.98] w-full sm:w-auto"
               >
                 <span>{cta.primaryCta}</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -74,7 +74,7 @@ export function ContactCta() {
               <button
                 onClick={handleCopyEmail}
                 type="button"
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-md bg-[#111111] text-white font-mono text-xs border border-[#222222] transition-all duration-200 hover:border-white hover:bg-[#161616] active:scale-[0.98] cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-md bg-[#111111] text-white font-mono text-xs border border-[#222222] transition-all duration-200 hover:border-white hover:bg-[#161616] active:scale-[0.98] cursor-pointer w-full sm:w-auto"
                 aria-label="Copy direct email address"
               >
                 {copied ? (
@@ -92,21 +92,21 @@ export function ContactCta() {
             </div>
 
             {/* Direct Channels & Social Links */}
-            <div className="mt-14 pt-8 border-t border-[#1C1C1C] w-full flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-2.5 text-xs font-mono">
-                <span className="px-2 py-1 rounded bg-[#141414] text-white border border-[#262626] flex items-center gap-1.5">
+            <div className="mt-12 sm:mt-14 pt-6 sm:pt-8 border-t border-[#1C1C1C] w-full flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-6">
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-2.5 text-xs font-mono text-center sm:text-left">
+                <span className="px-2 py-1 rounded bg-[#141414] text-white border border-[#262626] flex items-center gap-1.5 shrink-0">
                   <Mail className="w-3.5 h-3.5" />
                   <span>DIRECT REACH:</span>
                 </span>
                 <a
                   href={`mailto:${cta.email}`}
-                  className="text-white font-bold hover:underline transition-colors"
+                  className="text-white font-bold hover:underline transition-colors break-all"
                 >
                   {cta.email}
                 </a>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
                 <a
                   href={social.portfolio}
                   target="_blank"

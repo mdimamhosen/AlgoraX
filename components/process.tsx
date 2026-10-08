@@ -24,7 +24,7 @@ export function Process() {
             {processSteps.map((item, index) => (
               <div
                 key={item.step}
-                className="relative z-10 flex flex-col justify-between p-6 rounded-xl bg-[#0A0A0A] border border-[#222222] hover:border-[#444444] transition-all duration-200"
+                className="relative z-10 flex flex-col justify-between p-5 sm:p-6 rounded-xl bg-[#0A0A0A] border border-[#222222] hover:border-[#444444] transition-all duration-200"
               >
                 <div>
                   {/* Step Header with Node */}

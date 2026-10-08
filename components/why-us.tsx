@@ -24,7 +24,7 @@ export function WhyUs() {
             return (
               <div
                 key={item.title}
-                className="group relative p-7 rounded-xl bg-[#0A0A0A] border border-[#222222] transition-all duration-300 hover:border-[#555555] hover:bg-[#0E0E0E]"
+                className="group relative p-5 sm:p-7 rounded-xl bg-[#0A0A0A] border border-[#222222] transition-all duration-300 hover:border-[#555555] hover:bg-[#0E0E0E]"
               >
                 <div className="flex items-center justify-between pb-4 border-b border-[#1A1A1A]">
                   <span className="text-xs font-mono text-[#666666] group-hover:text-white transition-colors">
